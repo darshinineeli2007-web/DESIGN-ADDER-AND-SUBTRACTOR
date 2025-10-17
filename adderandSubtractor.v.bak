@@ -1,0 +1,16 @@
+// 4-bit Adder and Subtractor
+module AdderandSubtractor(
+    input [3:0] A,     // 4-bit input A
+    input [3:0] B,     // 4-bit input B
+    input M,           // Mode control: 0 = Add, 1 = Subtract
+    output [3:0] S,    // 4-bit Sum/Difference output
+    output Cout         // Carry/Borrow output
+);
+
+    wire [3:0] B_xor;  // XOR result of B and M
+
+    // If M=0 → Addition, If M=1 → Subtraction (2’s complement)
+    assign B_xor = B ^ {4{M}};     // XOR B with M for subtraction
+    assign {Cout, S} = A + B_xor + M;
+
+endmodule
