@@ -1,0 +1,21 @@
+|adderandSubtractor
+A[0] => _.DATAD
+A[1] => _.DATAD
+A[2] => _.DATAD
+A[3] => _.DATAD
+B[0] => B_xor[0].IN0
+B[1] => B_xor[1].IN0
+B[2] => B_xor[2].IN0
+B[3] => B_xor[3].IN0
+M => B_xor[0].IN1
+M => B_xor[1].IN1
+M => B_xor[2].IN1
+M => B_xor[3].IN1
+M => _.DATAB
+S[0] <= _.SUM_OUT
+S[1] <= _.SUM_OUT
+S[2] <= _.SUM_OUT
+S[3] <= _.SUM_OUT
+Cout <= _.SUM_OUT
+
+
